@@ -31,7 +31,6 @@ const forecast = (longitude, latitude, callback) => {
                     + body.current.feelslike + " degress out. The humidity is "
                     + body.current.humidity + "%.")
             }
-            }
         } catch {
             console.log('Error !!')
         }
