@@ -16,9 +16,6 @@ const forecast = (longitude, latitude, callback) => {
             } else if (data.error) {
                 callback('Unable to connect to location services!', undefined)
             } else {
-                //console.log(data.current.weather_descriptions[0] + '. It is ', data.current.temperature, ' degrees out')
-                //console.log('It feels like ', data.current.feelslike, ' degrees out')
-
                 //callback(undefined, {
                 //    weather_descriptions: data.current.weather_descriptions[0],
                 //    temperature: data.current.temperature,
@@ -26,10 +23,10 @@ const forecast = (longitude, latitude, callback) => {
                 //})
 
                 callback(undefined,
-                    body.current.weather_descriptions[0] + ". It is currently "
-                    + body.current.temperature + " degress out. It feels like "
-                    + body.current.feelslike + " degress out. The humidity is "
-                    + body.current.humidity + "%.")
+                    data.current.weather_descriptions[0] + ". It is currently "
+                    + data.current.temperature + " degress out. It feels like "
+                    + data.current.feelslike + " degress out. The humidity is "
+                    + data.current.humidity + "%.")
             }
         } catch {
             console.log('Error !!')
