@@ -26,10 +26,11 @@ const forecast = (longitude, latitude, callback) => {
                 //})
 
                 callback(undefined,
-                      data.current.weather_descriptions[0] + '. It is '
-                    + data.current.temperature + ' degrees out. It feels like '
-                    + data.current.feelslike + ' degrees out'
-                )
+                    body.current.weather_descriptions[0] + ". It is currently "
+                    + body.current.temperature + " degress out. It feels like "
+                    + body.current.feelslike + " degress out. The humidity is "
+                    + body.current.humidity + "%.")
+            }
             }
         } catch {
             console.log('Error !!')
